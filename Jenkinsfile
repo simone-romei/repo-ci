@@ -1,4 +1,4 @@
 
 node('master') {
-	echo "test me"
+	echo "test master"
 }
