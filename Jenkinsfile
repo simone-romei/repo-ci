@@ -1,4 +1,4 @@
 
-node('ciao') {
+node('node') {
 	echo "test me"
 }
