@@ -1,4 +1,0 @@
-
-node("kciao") {
-	echo "test me"
-}
