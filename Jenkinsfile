@@ -9,12 +9,12 @@ node('master') {
 
 	stage("Building Hybris") {
 		//Define directory
-		def rootDir = pwd()
+		def workspace = pwd()
 		
 		//Load Script
-		def hybrisBuild = load "${rootDir}@script/jenkins/scripts/build.groovy"
+		def hybrisBuild = load "${workspace}@script/jenkins/scripts/build.groovy"
 
-		hybrisBuild.unzipPlatform("${rootDir}/opt/hybris/HYBRISCOMM5700P_0.zip","${rootDir}/hybris_57")
+		hybrisBuild.unzipPlatform("${workspace}/opt/hybris/HYBRISCOMM5700P_0.zip","${rootDir}/hybris_57")
 
 	}
 
