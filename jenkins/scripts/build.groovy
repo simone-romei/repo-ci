@@ -1,3 +1,7 @@
 
 
-def hello = { 123 }
+def testBuild() {
+	echo "testBuild"
+}
+
+return this

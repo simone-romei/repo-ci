@@ -10,7 +10,7 @@ node('master') {
 	stage("test") {
 		def rootDir = pwd()
 		def hybrisBuild = load "${rootDir}@script/jenkins/scripts/build.groovy"
-			echo hybrisBuild.hello
+		hybrisBuild.testBuild()
 
 	}
 
