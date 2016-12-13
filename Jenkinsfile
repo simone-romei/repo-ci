@@ -1,5 +1,6 @@
 
-/* Usefull  */
+/*  ON JENKIS MACHINE */
+
 
 
 /* External Library */
@@ -14,7 +15,7 @@ node('master') {
 		//Load Script
 		def hybrisBuild = load "${workspace}@script/jenkins/scripts/build.groovy"
 
-		hybrisBuild.unzipPlatform("${workspace}/opt/hybris/HYBRISCOMM5700P_0.zip","${workspace}/hybris_57")
+		hybrisBuild.unzipPlatform("/opt/hybris/HYBRISCOMM5700P_0.zip","${workspace}/hybris_57")
 
 	}
 
