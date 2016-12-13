@@ -1,1 +1,0 @@
-docker run -p 8080:8080 -p 50000:50000 -v /Users/i312480/Hybris/poc/hybris-ci/repo/jenkins/data:/var/jenkins_home jenkins
