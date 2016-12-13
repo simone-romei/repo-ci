@@ -9,7 +9,7 @@ node('master') {
 
 
 def loadScripts() {
-	   load "${workspace}@script/jenkins/scripts/build.groovy"
+	   //load "${workspace}@script/jenkins/scripts/build.groovy"
 
 }
 
