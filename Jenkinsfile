@@ -1,17 +1,14 @@
 
 
+/* External Library */
+def hybrisBuild = load "${workspace}@script/jenkins/scripts/build.groovy"
 
 node('master') {
 	echo "test master"
-	loadScripts()
-	echo hello
+	echo hybrisBuild.hello
 }
 
 
-def loadScripts() {
-	   load "${workspace}@script/jenkins/scripts/build.groovy"
-
-}
 
 
 
