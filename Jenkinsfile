@@ -4,7 +4,7 @@
 node('master') {
 	echo "test master"
 	loadScripts()
-	echo hello()
+	echo hello
 }
 
 
