@@ -1,13 +1,19 @@
 
 /* Usefull  */
-def rootDir = pwd()
+
 
 /* External Library */
-def hybrisBuild = load "${rootDir}@script/jenkins/scripts/build.groovy"
 
 node('master') {
 	echo "test master"
-	echo hybrisBuild.hello
+
+	stage("test") {
+		def rootDir = pwd()
+		def hybrisBuild = load "${rootDir}@script/jenkins/scripts/build.groovy"
+			echo hybrisBuild.hello
+
+	}
+
 }
 
 
