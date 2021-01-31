@@ -3,9 +3,8 @@ job("commerce - build") {
 
     parameters {
 
-        gitParam("commerce_git") {
-            branch("commerce_git_branch")
-        }
+        booleanParam('FLAG', true)
+        choiceParam('OPTION', ['option 1 (default)', 'option 2', 'option 3'])
 
     }
 
