@@ -1,18 +1,21 @@
-# Initial Setup
+# Environment Setup
 
-## Jenkins First Boot
-
-- Build the container
+## Build & Run the Environment
 ```
 docker-compose -f "env/docker-compose.yml" up -d --build
 ```
+
+## Configure Jenking
+
+### Setup Admin Account
+This will setup the admin account for Jenkins (first boot)
 
 - Check container log
 ```
 docker logs --tail 1000 jenkins-commerce
 ```
 
-- Check initial password
+- Check generated password
 ```
 Jenkins initial setup is required. An admin user has been created and a password generated.
 Please use the following password to proceed to installation:
@@ -28,10 +31,16 @@ http://localhost:8123/
 ```
 
 - Login and install all the suggested plugin.
-- Install the following "extra" plugin - `your_jenkins_url/pluginManager/available`
+
+### Install Extra Plugin
+Some extra plugin must be installed at Jenkins level.
+
+- Connect to Jenkins plugin manager
 ```
-Git
+http://localhost:8123/pluginManager/
+```
+
+- Install the following available plugin:
+```
 Job DSL
-Pipeline: Job
-Pipeline: Groovy 
 ```
