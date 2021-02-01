@@ -44,7 +44,8 @@ http://localhost:8123/pluginManager/
 ```
 Job DSL
 ?clone-workspace-scm
-envinject
+?envinject
+File Operations
 ```
 
 ### Configure Shared Library
