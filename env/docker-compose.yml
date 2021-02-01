@@ -6,7 +6,15 @@ services:
     user: root
     ports:
       - 8123:8080
-      - 50003:50000
+      - 50123:50000
     container_name: jenkins-commerce
     volumes:
-      - ./jenkins_home:/var/jenkins_home
+      - ./jenkins:/var/jenkins_home
+  # agent_commerce:
+  #   image: jenkins/agent
+  #   container_name: agent-commerce
+  #   command: java -jar /usr/share/jenkins/agent.jar -jnlpUrl http://jenkins-host:8080/computer/agent-commerce/slave-agent.jnlp -jnlpCredentials admin:nimda
+  #   links:
+  #     - "jenkins:jenkins-host"
+  #   volumes:
+  #     - ./agent-commerce:/workspace
