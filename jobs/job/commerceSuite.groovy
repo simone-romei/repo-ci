@@ -4,6 +4,6 @@ job('commerce-suite') {
         fileParam('commerce-suite/hybris-commerce-suite.zip', 'SAP Commerce Suite')
     }
     steps {
-        sh("unzip -q commerce-suite/hybris-commerce-suite.zip -d commerce-suite")
+        shell("unzip -q commerce-suite/hybris-commerce-suite.zip -d commerce-suite")
     }
 }
