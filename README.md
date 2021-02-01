@@ -43,6 +43,7 @@ http://localhost:8123/pluginManager/
 - Install the following available plugin:
 ```
 Job DSL
+clone-workspace-scm
 ```
 
 ### Configure Shared Library
