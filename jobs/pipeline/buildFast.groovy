@@ -11,13 +11,13 @@ pipelineJob('commerce pipeline - build fast') {
                         stage('Stage 1') {
                             steps {
                                 echo 'stage1'
-                                commerceSetup()
+                                commerceSetup
                             }
                         }
                         stage('Stage 2') {
                             steps {
                                 echo 'stage2'
-                                commerceAnt()
+                                commerceAnt
                             }
                         }
                     }
