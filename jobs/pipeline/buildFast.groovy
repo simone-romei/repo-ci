@@ -4,20 +4,18 @@ pipelineJob('commerce pipeline - build fast') {
     definition {
         cps {
             script('''
-                @Library('commerce-library') _
+                @Library('commerce-library@master') _
                 pipeline {
                     agent any
                     stages {
-                        stage('Stage 1') {
+                        stage('setup') {
                             steps {
-                                echo 'stage1'
-                                commerceSetup
+                                commerceSetup()
                             }
                         }
-                        stage('Stage 2') {
+                        stage('build') {
                             steps {
-                                echo 'stage2'
-                                commerceAnt
+                                commerceAnt('clean all')
                             }
                         }
                     }
