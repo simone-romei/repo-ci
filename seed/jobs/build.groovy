@@ -9,10 +9,9 @@ job('commerce-build') {
     }
     steps {
         dsl {
-            external('/vars/commerceLog.groovy')
+            external('/vars/commerceSetup.groovy')
         }
         shell("echo 'commerce-build: started'")
-        commerceLog.info "ciao" ;
         shell("echo 'commerce-build: setup commerce'")
     }
 }
