@@ -44,3 +44,13 @@ http://localhost:8123/pluginManager/
 ```
 Job DSL
 ```
+
+### Configure Shared Library
+- How to setup a shared library
+```
+https://www.jenkins.io/doc/book/pipeline/shared-libraries/
+```
+- Use as library name:
+```
+commerce-library
+```
