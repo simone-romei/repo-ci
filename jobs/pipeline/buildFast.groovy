@@ -3,7 +3,8 @@ pipelineJob('commerce pipeline - build fast') {
     definition {
         cpsScm {
             scm {
-                git('https://github.com/simone-romei/repo-ci')
+                git('https://github.com/simone-romei/repo-ci', 'master')
+                branch
             }
             scriptPath('/jobs/dsl/buildFast.jenkins') 
         }
